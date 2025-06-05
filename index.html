@@ -2,49 +2,83 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menu - Mocca Coffee and More</title>
-<style>
-  body { font-family: sans-serif; background: #fff8f0; margin: 0; }
-  header { background: #8b4513; color: white; padding: 15px; text-align: center; font-size: 1.4rem; }
-  nav { display: flex; flex-wrap: wrap; justify-content: center; background: #deb887; }
-  nav button {
-    background: #f0e6d2; border: none; margin: 5px; padding: 10px 15px;
-    border-radius: 8px; cursor: pointer; font-weight: bold;
-  }
-  nav button.active, nav button:hover {
-    background: #8b4513; color: white;
-  }
-  .category { display: none; padding: 10px 20px; }
-  .category.active { display: block; }
-  ul { list-style: none; padding: 0; }
-  li {
-    background: #fff; margin: 8px 0; padding: 10px; border-radius: 8px;
-    display: flex; justify-content: space-between; box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-  }
-  .price { font-weight: bold; color: #8b4513; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mocca Coffee & More</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff8f0;
+      color: #4b3b2b;
+    }
+    header {
+      background: url('store.webp') center/cover no-repeat;
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+    header img {
+      width: 180px;
+      max-width: 90%;
+    }
+    .dropdown {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      background: #f5deb3;
+    }
+    select {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: #fff;
+      font-weight: bold;
+      color: #4b3b2b;
+    }
+    .category {
+      display: none;
+      padding: 1rem;
+    }
+    .category.active {
+      display: block;
+    }
+    .item {
+      background: #fff;
+      margin: 10px 0;
+      padding: 12px 16px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .price {
+      font-weight: bold;
+      color: #b36b00;
+    }
+    @media (max-width: 600px) {
+      header img {
+        width: 60%;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>Mocca Coffee & More - Κατάλογος</header>
-<nav>
-<button class="tab-btn" data-target="cat0">☕ ΡΟΦΗΜΑΤΑ</button><button class="tab-btn" data-target="cat1">🍵 ΤΣΑΪ</button><button class="tab-btn" data-target="cat2">🥪 ΦΑΓΗΤΟ</button><button class="tab-btn" data-target="cat3">🍹 ΧΥΜΟΙ</button><button class="tab-btn" data-target="cat4">🥤 ΑΝΑΨΥΚΤΙΚΑ</button><button class="tab-btn" data-target="cat5">💧 ΝΕΡΑ</button><button class="tab-btn" data-target="cat6">⚡ ENERGY DRINK</button><button class="tab-btn" data-target="cat7">🍺 ΜΠΥΡΕΣ</button></nav><main><section id="cat0" class="category active"><ul><li>Espresso<span class="price">2.50€</span></li><li>Espresso διπλό<span class="price">3.00€</span></li><li>Espresso stretto<span class="price">2.50€</span></li><li>Espresso Macchiato<span class="price">2.50€</span></li><li>Cappuccino μονό<span class="price">3.50€</span></li><li>Cappuccino διπλό<span class="price">4.00€</span></li><li>Cappuccino latte<span class="price">3.50€</span></li><li>Freddo Espresso<span class="price">3.50€</span></li><li>Freddo Cappuccino<span class="price">4.00€</span></li><li>Americano μονό<span class="price">3.50€</span></li><li>Americano διπλό<span class="price">4.00€</span></li><li>Mochaccino<span class="price">4.00€</span></li><li>Φραπέ<span class="price">3.00€</span></li><li>Nescafe<span class="price">3.00€</span></li><li>Ελληνικός<span class="price">2.50€</span></li><li>Ελληνικός διπλός<span class="price">3.00€</span></li><li>Ομοιοπαθητικός<span class="price">3.00€</span></li><li>Γαλλικός<span class="price">3.00€</span></li><li>Γαλλικός με γεύσεις<span class="price">3.50€</span></li><li>Irish Coffee<span class="price">4.50€</span></li><li>Κακάο<span class="price">2.50€</span></li><li>Κακάο διπλό<span class="price">3.00€</span></li><li>Σοκολάτα<span class="price">3.50€</span></li><li>Σοκολάτα ζεστή<span class="price">3.50€</span></li><li>Σοκολάτα κρύα<span class="price">3.50€</span></li><li>Σοκολάτα με γεύσεις<span class="price">4.00€</span></li></ul></section><section id="cat1" class="category "><ul><li>Λεμόνι<span class="price">3.00€</span></li><li>Ροδάκινο<span class="price">3.00€</span></li><li>Πράσινο<span class="price">3.00€</span></li><li>Ζεστό<span class="price">3.00€</span></li></ul></section><section id="cat2" class="category "><ul><li>Κρύο σάντουιτς<span class="price">3.00€</span></li><li>Τορτίγια γαλοπούλα<span class="price">1.50€</span></li><li>Τορτίγια κοτόπουλο<span class="price">2.00€</span></li><li>Club<span class="price">6.50€</span></li><li>Toast<span class="price">2.50€</span></li><li>Ποικιλία αλλαντικών & τυριών 2 ατόμων<span class="price">5.00€</span></li><li>Ποικιλία αλλαντικών & τυριών 4 ατόμων<span class="price">10.00€</span></li><li>Πίτα κομμάτι<span class="price">2.50€</span></li></ul></section><section id="cat3" class="category "><ul><li>Πορτοκάλι<span class="price">3.00€</span></li><li>Βύσσινο<span class="price">3.00€</span></li><li>Ανανάς<span class="price">3.00€</span></li><li>Μπανάνα<span class="price">3.00€</span></li><li>Ανάμεικτος<span class="price">3.00€</span></li><li>Φυσικός Πορτοκάλι<span class="price">3.50€</span></li></ul></section><section id="cat4" class="category "><ul><li>Πορτοκαλάδα<span class="price">3.00€</span></li><li>Pepsi<span class="price">3.00€</span></li><li>Λεμονάδα<span class="price">3.00€</span></li><li>Tonic<span class="price">3.00€</span></li><li>Sprite<span class="price">3.00€</span></li><li>Σόδα<span class="price">3.00€</span></li><li>Σουρωτή<span class="price">3.00€</span></li><li>Pink Grapefruit Soda<span class="price">5.00€</span></li><li>Ανθρακούχο Premium<span class="price">4.00€</span></li></ul></section><section id="cat5" class="category "><ul><li>Μικρό<span class="price">0.50€</span></li><li>Μεγάλο<span class="price">1.00€</span></li></ul></section><section id="cat6" class="category "><ul><li>Red Bull<span class="price">5.00€</span></li></ul></section><section id="cat7" class="category "><ul><li>Βαρέλι 330ml<span class="price">3.50€</span></li><li>Fix<span class="price">4.00€</span></li><li>Fix Dark<span class="price">4.00€</span></li><li>Fix 0.0<span class="price">4.00€</span></li><li>Sol 330ml<span class="price">5.00€</span></li><li>Kaizer<span class="price">4.00€</span></li><li>Μύθος<span class="price">4.00€</span></li><li>Μηλοκλέφτης<span class="price">5.00€</span></li></ul></section>
+<header>
+  <img src="logo.webp" alt="Mocca Coffee & More Logo">
+</header>
+<div class="dropdown">
+  <select id="categorySelector">
+<option value="cat0">☕ Ροφήματα</option><option value="cat1">🍵 Τσάι</option><option value="cat2">🥪 Φαγητό</option><option value="cat3">🍹 Χυμοί</option><option value="cat4">🥤 Αναψυκτικά</option><option value="cat5">💧 Νερά</option><option value="cat6">⚡ Energy Drink</option><option value="cat7">🍺 Μπύρες</option><option value="cat8">🍸 VODKA</option><option value="cat9">Premium Vodka</option><option value="cat10">🍸 GIN</option><option value="cat11">Premium Gin</option><option value="cat12">🥃 WHISKEY</option><option value="cat13">Premium Whiskey</option><option value="cat14">🍹 RUM</option><option value="cat15">Premium Rum</option><option value="cat16">🌵 TEQUILA</option><option value="cat17">🍹 APERITIVO</option><option value="cat18">🍸 LIQUEUR</option><option value="cat19">🥃 COGNAC</option><option value="cat20">🍷 ΟΙΝΟΣ ΛΕΥΚΟΣ</option><option value="cat21">🍷 ΟΙΝΟΣ ΕΡΥΘΡΟΣ</option><option value="cat22">🍷 ΟΙΝΟΣ ΡΟΖΕ</option></select></div><main><div id="cat0" class="category active"><div class="item"><span>Espresso</span><span class="price">2.50€</span></div><div class="item"><span>Espresso διπλό</span><span class="price">3.00€</span></div><div class="item"><span>Espresso stretto</span><span class="price">2.50€</span></div><div class="item"><span>Espresso Macchiato</span><span class="price">2.50€</span></div><div class="item"><span>Cappuccino μονό</span><span class="price">3.50€</span></div><div class="item"><span>Cappuccino διπλό</span><span class="price">4.00€</span></div><div class="item"><span>Cappuccino latte</span><span class="price">3.50€</span></div><div class="item"><span>Freddo Espresso</span><span class="price">3.50€</span></div><div class="item"><span>Freddo Cappuccino</span><span class="price">4.00€</span></div><div class="item"><span>Americano μονό</span><span class="price">3.50€</span></div><div class="item"><span>Americano διπλό</span><span class="price">4.00€</span></div><div class="item"><span>Mochaccino</span><span class="price">4.00€</span></div><div class="item"><span>Φραπέ</span><span class="price">3.00€</span></div><div class="item"><span>Nescafe</span><span class="price">3.00€</span></div><div class="item"><span>Ελληνικός</span><span class="price">2.50€</span></div><div class="item"><span>Ελληνικός διπλός</span><span class="price">3.00€</span></div><div class="item"><span>Ομοιοπαθητικός</span><span class="price">3.00€</span></div><div class="item"><span>Γαλλικός</span><span class="price">3.00€</span></div><div class="item"><span>Γαλλικός με γεύσεις</span><span class="price">3.50€</span></div><div class="item"><span>Irish Coffee</span><span class="price">4.50€</span></div><div class="item"><span>Κακάο</span><span class="price">2.50€</span></div><div class="item"><span>Κακάο διπλό</span><span class="price">3.00€</span></div><div class="item"><span>Σοκολάτα</span><span class="price">3.50€</span></div><div class="item"><span>Σοκολάτα ζεστή</span><span class="price">3.50€</span></div><div class="item"><span>Σοκολάτα κρύα</span><span class="price">3.50€</span></div><div class="item"><span>Σοκολάτα με γεύσεις</span><span class="price">4.00€</span></div></div><div id="cat1" class="category"><div class="item"><span>Λεμόνι</span><span class="price">3.00€</span></div><div class="item"><span>Ροδάκινο</span><span class="price">3.00€</span></div><div class="item"><span>Πράσινο</span><span class="price">3.00€</span></div><div class="item"><span>Ζεστό</span><span class="price">3.00€</span></div></div><div id="cat2" class="category"><div class="item"><span>Κρύο σάντουιτς</span><span class="price">3.00€</span></div><div class="item"><span>Τορτίγια γαλοπούλα</span><span class="price">1.50€</span></div><div class="item"><span>Τορτίγια κοτόπουλο</span><span class="price">2.00€</span></div><div class="item"><span>Club</span><span class="price">6.50€</span></div><div class="item"><span>Toast</span><span class="price">2.50€</span></div><div class="item"><span>Ποικιλία αλλαντικών & τυριών 2 ατόμων</span><span class="price">5.00€</span></div><div class="item"><span>Ποικιλία αλλαντικών & τυριών 4 ατόμων</span><span class="price">10.00€</span></div><div class="item"><span>Πίτα κομμάτι</span><span class="price">2.50€</span></div></div><div id="cat3" class="category"><div class="item"><span>Πορτοκάλι</span><span class="price">3.00€</span></div><div class="item"><span>Βύσσινο</span><span class="price">3.00€</span></div><div class="item"><span>Ανανάς</span><span class="price">3.00€</span></div><div class="item"><span>Μπανάνα</span><span class="price">3.00€</span></div><div class="item"><span>Ανάμεικτος</span><span class="price">3.00€</span></div><div class="item"><span>Φυσικός Πορτοκάλι</span><span class="price">3.50€</span></div></div><div id="cat4" class="category"><div class="item"><span>Πορτοκαλάδα</span><span class="price">3.00€</span></div><div class="item"><span>Pepsi</span><span class="price">3.00€</span></div><div class="item"><span>Λεμονάδα</span><span class="price">3.00€</span></div><div class="item"><span>Tonic</span><span class="price">3.00€</span></div><div class="item"><span>Sprite</span><span class="price">3.00€</span></div><div class="item"><span>Σόδα</span><span class="price">3.00€</span></div><div class="item"><span>Σουρωτή</span><span class="price">3.00€</span></div><div class="item"><span>Pink Grapefruit Soda</span><span class="price">5.00€</span></div><div class="item"><span>Ανθρακούχο Premium</span><span class="price">4.00€</span></div></div><div id="cat5" class="category"><div class="item"><span>Μικρό</span><span class="price">0.50€</span></div><div class="item"><span>Μεγάλο</span><span class="price">1.00€</span></div></div><div id="cat6" class="category"><div class="item"><span>Red Bull</span><span class="price">5.00€</span></div></div><div id="cat7" class="category"><div class="item"><span>Βαρέλι 330ml</span><span class="price">3.50€</span></div><div class="item"><span>Fix</span><span class="price">4.00€</span></div><div class="item"><span>Fix Dark</span><span class="price">4.00€</span></div><div class="item"><span>Fix 0.0</span><span class="price">4.00€</span></div><div class="item"><span>Sol 330ml</span><span class="price">5.00€</span></div><div class="item"><span>Kaizer</span><span class="price">4.00€</span></div><div class="item"><span>Μύθος</span><span class="price">4.00€</span></div><div class="item"><span>Μηλοκλέφτης</span><span class="price">5.00€</span></div></div><div id="cat8" class="category"><div class="item"><span>Absolut</span><span class="price">8.00€</span></div><div class="item"><span>Stoli</span><span class="price">8.00€</span></div></div><div id="cat9" class="category"><div class="item"><span>Ciroc</span><span class="price">11.00€</span></div><div class="item"><span>Absolut Elyx</span><span class="price">11.00€</span></div><div class="item"><span>Grey Goose</span><span class="price">11.00€</span></div><div class="item"><span>Belvedere</span><span class="price">11.00€</span></div><div class="item"><span>Ketel One</span><span class="price">11.00€</span></div><div class="item"><span>Beluga</span><span class="price">12.00€</span></div></div><div id="cat10" class="category"><div class="item"><span>Beefeater London Dry</span><span class="price">8.00€</span></div><div class="item"><span>Beefeater 0%</span><span class="price">8.00€</span></div><div class="item"><span>Tanqueray</span><span class="price">8.00€</span></div></div><div id="cat11" class="category"><div class="item"><span>Beefeater 24</span><span class="price">12.00€</span></div><div class="item"><span>Malfy Gin Con Limone</span><span class="price">11.00€</span></div><div class="item"><span>Malfy Gin Originale</span><span class="price">11.00€</span></div><div class="item"><span>Tanqueray 10</span><span class="price">10.00€</span></div><div class="item"><span>Hendrick’s</span><span class="price">11.00€</span></div></div><div id="cat12" class="category"><div class="item"><span>Jameson</span><span class="price">8.00€</span></div><div class="item"><span>Ballantine’s Finest</span><span class="price">8.00€</span></div><div class="item"><span>Johnnie Red</span><span class="price">8.00€</span></div><div class="item"><span>Dewar’s</span><span class="price">8.00€</span></div><div class="item"><span>Famous</span><span class="price">8.00€</span></div><div class="item"><span>Cutty Sark</span><span class="price">8.00€</span></div><div class="item"><span>Tullamore</span><span class="price">8.00€</span></div><div class="item"><span>Haig</span><span class="price">8.00€</span></div><div class="item"><span>Bushmills</span><span class="price">8.00€</span></div><div class="item"><span>Four Roses</span><span class="price">8.00€</span></div><div class="item"><span>Grant’s</span><span class="price">8.00€</span></div></div><div id="cat13" class="category"><div class="item"><span>Jameson Black Barrel</span><span class="price">10.00€</span></div><div class="item"><span>Chivas Regal 12yo</span><span class="price">9.50€</span></div><div class="item"><span>Chivas Extra 13yo</span><span class="price">11.00€</span></div><div class="item"><span>Johnnie Black</span><span class="price">9.50€</span></div><div class="item"><span>Lagavulin</span><span class="price">14.00€</span></div><div class="item"><span>Dalmore</span><span class="price">15.00€</span></div><div class="item"><span>Glenfiddich</span><span class="price">10.00€</span></div><div class="item"><span>Glenfiddich 15</span><span class="price">15.00€</span></div><div class="item"><span>Dimple</span><span class="price">9.50€</span></div><div class="item"><span>Cardhu</span><span class="price">10.00€</span></div><div class="item"><span>Drambuie</span><span class="price">9.50€</span></div><div class="item"><span>Jack Daniel’s</span><span class="price">9.50€</span></div><div class="item"><span>Jack Daniel’s Honey</span><span class="price">9.50€</span></div></div><div id="cat14" class="category"><div class="item"><span>Havana Club Añejo 3 Años</span><span class="price">8.00€</span></div><div class="item"><span>Havana Añejo Especial</span><span class="price">8.00€</span></div><div class="item"><span>Havana Club Cuban Spiced</span><span class="price">8.00€</span></div><div class="item"><span>Sailor Jerry</span><span class="price">8.00€</span></div><div class="item"><span>Malibu</span><span class="price">8.00€</span></div><div class="item"><span>Bacardi (λευκό)</span><span class="price">8.00€</span></div></div><div id="cat15" class="category"><div class="item"><span>Havana Club Añejo 7 Años</span><span class="price">9.50€</span></div><div class="item"><span>Bumbu The Original</span><span class="price">12.00€</span></div><div class="item"><span>Bumbu XO</span><span class="price">12.00€</span></div><div class="item"><span>Bumbu Cream</span><span class="price">12.00€</span></div><div class="item"><span>Zacapa</span><span class="price">14.00€</span></div><div class="item"><span>Diplomatico</span><span class="price">11.00€</span></div></div><div id="cat16" class="category"><div class="item"><span>Olmeca Tequila Silver</span><span class="price">8.00€</span></div><div class="item"><span>Olmeca Tequila Reposado</span><span class="price">8.00€</span></div></div><div id="cat17" class="category"><div class="item"><span>Campari</span><span class="price">8.00€</span></div><div class="item"><span>Aperol</span><span class="price">8.00€</span></div><div class="item"><span>Martini</span><span class="price">8.00€</span></div></div><div id="cat18" class="category"><div class="item"><span>Jagermeister</span><span class="price">8.00€</span></div><div class="item"><span>Baileys</span><span class="price">8.00€</span></div><div class="item"><span>Kahlua</span><span class="price">8.00€</span></div><div class="item"><span>Cointreau</span><span class="price">8.00€</span></div><div class="item"><span>Frangelico</span><span class="price">8.00€</span></div><div class="item"><span>Amaretto</span><span class="price">8.00€</span></div><div class="item"><span>Roots Mastiha</span><span class="price">9.50€</span></div><div class="item"><span>Italicus Rosolio di Bergamotto (υποσημείωση σε Roots Mastiha)</span><span class="price"></span></div></div><div id="cat19" class="category"><div class="item"><span>Martell VS</span><span class="price">8.00€</span></div><div class="item"><span>Metaxa 7</span><span class="price">8.00€</span></div><div class="item"><span>Metaxa 12</span><span class="price">11.00€</span></div></div><div id="cat20" class="category"><div class="item"><span>Παράγκα 150ml</span><span class="price">5.00€</span></div><div class="item"><span>Παράγκα φιάλη 700ml</span><span class="price">25.00€</span></div><div class="item"><span>Νεράιδες 150ml</span><span class="price">4.50€</span></div><div class="item"><span>Νεράιδες φιάλη 700ml</span><span class="price">25.00€</span></div><div class="item"><span>Σαμαρόπετρα 150ml</span><span class="price">5.00€</span></div><div class="item"><span>Σαμαρόπετρα φιάλη 700ml</span><span class="price">30.00€</span></div><div class="item"><span>Επτά κύματα 150ml</span><span class="price">4.50€</span></div><div class="item"><span>Επτά κύματα φιάλη 700ml</span><span class="price">25.00€</span></div></div><div id="cat21" class="category"><div class="item"><span>Παράγκα 150ml</span><span class="price">5.00€</span></div><div class="item"><span>Παράγκα φιάλη 700ml</span><span class="price">25.00€</span></div><div class="item"><span>Μελύρυτος 150ml</span><span class="price">4.00€</span></div><div class="item"><span>Μελύρυτος φιάλη 700ml</span><span class="price">20.00€</span></div><div class="item"><span>Κτήμα Τσέου 150ml</span><span class="price">5.00€</span></div><div class="item"><span>Κτήμα Τσέου φιάλη 700ml</span><span class="price">25.00€</span></div></div><div id="cat22" class="category"><div class="item"><span>Τρεις Μάγισσες ημίγλυκο 150ml</span><span class="price">5.00€</span></div><div class="item"><span>Τρεις Μάγισσες ημίγλυκο φιάλη 700ml</span><span class="price">25.00€</span></div><div class="item"><span>Παράγκα 150ml</span><span class="price">5.00€</span></div><div class="item"><span>Παράγκα φιάλη 700ml</span><span class="price">25.00€</span></div></div>
 </main>
 <script>
-  const buttons = document.querySelectorAll('.tab-btn');
-  const categories = document.querySelectorAll('.category');
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      categories.forEach(cat => {
-        cat.classList.remove('active');
-        if (cat.id === btn.dataset.target) {
-          cat.classList.add('active');
-        }
-      });
-    });
+  const selector = document.getElementById('categorySelector');
+  const sections = document.querySelectorAll('.category');
+  selector.addEventListener('change', () => {
+    sections.forEach(section => section.classList.remove('active'));
+    const selected = selector.value;
+    document.getElementById(selected).classList.add('active');
   });
 </script>
 </body>
