@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu - Mocca Coffee and More</title>
+<style>
+  body { font-family: sans-serif; background: #fff8f0; margin: 0; }
+  header { background: #8b4513; color: white; padding: 15px; text-align: center; font-size: 1.4rem; }
+  nav { display: flex; flex-wrap: wrap; justify-content: center; background: #deb887; }
+  nav button {
+    background: #f0e6d2; border: none; margin: 5px; padding: 10px 15px;
+    border-radius: 8px; cursor: pointer; font-weight: bold;
+  }
+  nav button.active, nav button:hover {
+    background: #8b4513; color: white;
+  }
+  .category { display: none; padding: 10px 20px; }
+  .category.active { display: block; }
+  ul { list-style: none; padding: 0; }
+  li {
+    background: #fff; margin: 8px 0; padding: 10px; border-radius: 8px;
+    display: flex; justify-content: space-between; box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  }
+  .price { font-weight: bold; color: #8b4513; }
+</style>
+</head>
+<body>
+<header>Mocca Coffee & More - Κατάλογος</header>
+<nav>
+<button class="tab-btn" data-target="cat0">☕ ΡΟΦΗΜΑΤΑ</button><button class="tab-btn" data-target="cat1">🍵 ΤΣΑΪ</button><button class="tab-btn" data-target="cat2">🥪 ΦΑΓΗΤΟ</button><button class="tab-btn" data-target="cat3">🍹 ΧΥΜΟΙ</button><button class="tab-btn" data-target="cat4">🥤 ΑΝΑΨΥΚΤΙΚΑ</button><button class="tab-btn" data-target="cat5">💧 ΝΕΡΑ</button><button class="tab-btn" data-target="cat6">⚡ ENERGY DRINK</button><button class="tab-btn" data-target="cat7">🍺 ΜΠΥΡΕΣ</button></nav><main><section id="cat0" class="category active"><ul><li>Espresso<span class="price">2.50€</span></li><li>Espresso διπλό<span class="price">3.00€</span></li><li>Espresso stretto<span class="price">2.50€</span></li><li>Espresso Macchiato<span class="price">2.50€</span></li><li>Cappuccino μονό<span class="price">3.50€</span></li><li>Cappuccino διπλό<span class="price">4.00€</span></li><li>Cappuccino latte<span class="price">3.50€</span></li><li>Freddo Espresso<span class="price">3.50€</span></li><li>Freddo Cappuccino<span class="price">4.00€</span></li><li>Americano μονό<span class="price">3.50€</span></li><li>Americano διπλό<span class="price">4.00€</span></li><li>Mochaccino<span class="price">4.00€</span></li><li>Φραπέ<span class="price">3.00€</span></li><li>Nescafe<span class="price">3.00€</span></li><li>Ελληνικός<span class="price">2.50€</span></li><li>Ελληνικός διπλός<span class="price">3.00€</span></li><li>Ομοιοπαθητικός<span class="price">3.00€</span></li><li>Γαλλικός<span class="price">3.00€</span></li><li>Γαλλικός με γεύσεις<span class="price">3.50€</span></li><li>Irish Coffee<span class="price">4.50€</span></li><li>Κακάο<span class="price">2.50€</span></li><li>Κακάο διπλό<span class="price">3.00€</span></li><li>Σοκολάτα<span class="price">3.50€</span></li><li>Σοκολάτα ζεστή<span class="price">3.50€</span></li><li>Σοκολάτα κρύα<span class="price">3.50€</span></li><li>Σοκολάτα με γεύσεις<span class="price">4.00€</span></li></ul></section><section id="cat1" class="category "><ul><li>Λεμόνι<span class="price">3.00€</span></li><li>Ροδάκινο<span class="price">3.00€</span></li><li>Πράσινο<span class="price">3.00€</span></li><li>Ζεστό<span class="price">3.00€</span></li></ul></section><section id="cat2" class="category "><ul><li>Κρύο σάντουιτς<span class="price">3.00€</span></li><li>Τορτίγια γαλοπούλα<span class="price">1.50€</span></li><li>Τορτίγια κοτόπουλο<span class="price">2.00€</span></li><li>Club<span class="price">6.50€</span></li><li>Toast<span class="price">2.50€</span></li><li>Ποικιλία αλλαντικών & τυριών 2 ατόμων<span class="price">5.00€</span></li><li>Ποικιλία αλλαντικών & τυριών 4 ατόμων<span class="price">10.00€</span></li><li>Πίτα κομμάτι<span class="price">2.50€</span></li></ul></section><section id="cat3" class="category "><ul><li>Πορτοκάλι<span class="price">3.00€</span></li><li>Βύσσινο<span class="price">3.00€</span></li><li>Ανανάς<span class="price">3.00€</span></li><li>Μπανάνα<span class="price">3.00€</span></li><li>Ανάμεικτος<span class="price">3.00€</span></li><li>Φυσικός Πορτοκάλι<span class="price">3.50€</span></li></ul></section><section id="cat4" class="category "><ul><li>Πορτοκαλάδα<span class="price">3.00€</span></li><li>Pepsi<span class="price">3.00€</span></li><li>Λεμονάδα<span class="price">3.00€</span></li><li>Tonic<span class="price">3.00€</span></li><li>Sprite<span class="price">3.00€</span></li><li>Σόδα<span class="price">3.00€</span></li><li>Σουρωτή<span class="price">3.00€</span></li><li>Pink Grapefruit Soda<span class="price">5.00€</span></li><li>Ανθρακούχο Premium<span class="price">4.00€</span></li></ul></section><section id="cat5" class="category "><ul><li>Μικρό<span class="price">0.50€</span></li><li>Μεγάλο<span class="price">1.00€</span></li></ul></section><section id="cat6" class="category "><ul><li>Red Bull<span class="price">5.00€</span></li></ul></section><section id="cat7" class="category "><ul><li>Βαρέλι 330ml<span class="price">3.50€</span></li><li>Fix<span class="price">4.00€</span></li><li>Fix Dark<span class="price">4.00€</span></li><li>Fix 0.0<span class="price">4.00€</span></li><li>Sol 330ml<span class="price">5.00€</span></li><li>Kaizer<span class="price">4.00€</span></li><li>Μύθος<span class="price">4.00€</span></li><li>Μηλοκλέφτης<span class="price">5.00€</span></li></ul></section>
+</main>
+<script>
+  const buttons = document.querySelectorAll('.tab-btn');
+  const categories = document.querySelectorAll('.category');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      categories.forEach(cat => {
+        cat.classList.remove('active');
+        if (cat.id === btn.dataset.target) {
+          cat.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
